@@ -1,10 +1,7 @@
+# trips/views.py
+from datetime import datetime
+#from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
-
-# trips/views.py
-
-from django.http import HttpResponse
-
 def hello_world(request):
-    return HttpResponse("Hello World!")
+    return render(request, 'hello_world.html', {'current_time':datetime.now()})
